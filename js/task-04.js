@@ -4,15 +4,15 @@ const value = document.querySelector("#value");
 
 let counterValue = 0;
 
-function add() {
+function onIncreaseEvent() {
   counterValue += 1;
   value.textContent = counterValue;
 }
 
-function sub() {
+function onDecreaseEvent() {
   counterValue -= 1;
   value.textContent = counterValue;
 }
 
-increase.addEventListener("click", add);
-decrease.addEventListener("click", sub);
+increase.addEventListener("click", onIncreaseEvent);
+decrease.addEventListener("click", onDecreaseEvent);
