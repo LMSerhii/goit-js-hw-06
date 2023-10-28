@@ -1,8 +1,8 @@
 const nameInput = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
 
-nameInput.addEventListener("input", putText);
+nameInput.addEventListener("input", onNameInput);
 
-function putText(event) {
+function onNameInput(event) {
   nameOutput.textContent = event.currentTarget.value;
 }
