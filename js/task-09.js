@@ -8,9 +8,9 @@ const colorEl = document.querySelector(".color");
 const changeColorEl = document.querySelector(".change-color");
 const bodyEl = document.querySelector("body");
 
-changeColorEl.addEventListener("click", changeColor);
+changeColorEl.addEventListener("click", onChangeColorElEvent);
 
-function changeColor() {
+function onChangeColorElEvent() {
   const color = getRandomHexColor();
 
   bodyEl.style.backgroundColor = color;
