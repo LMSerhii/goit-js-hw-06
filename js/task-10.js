@@ -27,19 +27,20 @@ function createBoxes(amount) {
   let size = 30;
   let iterCounter = 0;
 
+  const elementsHTML = [];
+
   while (iterCounter < MAX_ELEMENTS) {
-    boxes.insertAdjacentHTML(
-      "beforeend",
-      `<div style="
-      background-color: ${getRandomHexColor()}; 
-      width: ${size}px; 
-      height: ${size}px">
-      </div>`
-    );
+    const element = `<div 
+    style="background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px">
+    </div>`;
+
+    elementsHTML.push(element);
 
     size += 10;
     iterCounter += 1;
   }
+
+  boxes.insertAdjacentHTML("beforeend", elementsHTML.join(""));
 }
 
 function destroyBoxes() {
